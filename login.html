@@ -24,13 +24,50 @@
 
         loginForm.addEventListener('submit', (e) => {
             e.preventDefault();
+            saveUser();
+        })
+
+        function getUsers(){
+            const user = localStorage.getItem('users');
+            let users = [];
+
+            user ? users = user : users = [];
+
+            return users;
+        }
+        function saveUser(){
             const email = loginForm.email.value;
             const password = loginForm.password.value;
+            const loggedUsers = getUsers();
+            let login = false;
 
-            if (email === "john@doe.com" && password === "12345") {
+            if (loggedUsers.some(user => user.email== email)) {
+                alert("duplicate data");
+            } else {
+                loggedUsers.push({
+                    "email": email,
+                    "password": password,
+                    "login": !login,
+                });
+
+                localStorage.setItem('users', JSON.stringify(loggedUsers));
+                login = true;
                 window.location.href = "home.html";
             }
-        })
+        }
+        (function loadPage(){
+            const users = getUsers();
+            console.log("Hello")
+            if (users.length === 0) {
+                return;
+            } else {
+                if (JSON.parse(getUsers())[0].login === true) {
+                    window.location.href = "home.html";
+                } else {
+                    return;
+                }
+            }
+        })();
     </script>
 </body>
 </html>
