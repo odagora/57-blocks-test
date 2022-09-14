@@ -4,12 +4,19 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "parcel login.html"
   },
+  "browserslist": [
+    "last 1 chrome version"
+  ],
   "keywords": [],
   "author": "Daniel Gonzalez <oscar.d.gonzalez@gmail.com>",
   "license": "MIT",
   "dependencies": {
     "bootstrap": "^5.2.1"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5",
+    "typescript": "^4.8.3"
   }
 }
