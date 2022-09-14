@@ -8,5 +8,8 @@
   },
   "keywords": [],
   "author": "Daniel Gonzalez <oscar.d.gonzalez@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "^5.2.1"
+  }
 }
