@@ -1,0 +1,12 @@
+{
+  "name": "57blocks",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Daniel Gonzalez <oscar.d.gonzalez@gmail.com>",
+  "license": "MIT"
+}
